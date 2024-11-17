@@ -1,0 +1,11 @@
+requests
+pandas
+nltk
+rouge-score
+argparse
+datasets
+torch>=1.10
+accelerate
+huggingface_hub
+transformers>=4.30
+tqdm
