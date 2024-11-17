@@ -29,7 +29,6 @@ This repository includes scripts and resources to:
 ### 1. Train a Metaphorical Reasoning Model
 Train a language model for metaphor reasoning using the following command:
 ```bash
-cd GPT
 python run_clm_no_trainer.py
 ```
 
