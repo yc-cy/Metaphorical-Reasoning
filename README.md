@@ -1,82 +1,78 @@
-## Repository Overview
+---
 
-This repository includes scripts and resources to:
-1. Train supervised models for metaphorical reasoning.
-2. Use LLM to obtain metaphor reasoning results.
-3. Perform zero-shot reasoning using LLMs.
-4. Evaluate reasoning using textual entailment and LLM-based similarity metrics.
-5. Automatically evaluate generated reasoning using BLEU scores.
+# Metaphorical Reasoning Repository
+
+This repository provides tools and resources for metaphorical reasoning, including dataset preparation, model training, and evaluation. It supports both supervised and zero-shot approaches using Large Language Models (LLMs).
 
 ---
 
 ## Installation
 
-1. Clone this repository:  
-   ```bash
-   git clone https://github.com/yc-cy/Metaphorical-Reasoning.git
-   cd Metaphorical-Reasoning
-   ```
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yc-cy/Metaphorical-Reasoning.git
+cd Metaphorical-Reasoning
+```
 
-2. Install required dependencies:  
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 2. Install Dependencies
+Install all required Python packages:
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
 ## Usage
 
 ### 1. Train a Metaphorical Reasoning Model
-Train a language model for metaphor reasoning using the following command:
+Train a causal language model for metaphor reasoning:
 ```bash
 python run_clm_no_trainer.py
 ```
 
 ### 2. Obtain Metaphor Reasoning Results with LLMs
-  ```python
-  get_dataset_reason()
-  get_final_dataset_reason()
-  ```
+Use the following functions in `data_process.py` to generate metaphor reasoning datasets (the same thing as below):
+```python
+get_dataset_reason()         # Generate metaphor reasoning for the dataset.
+get_final_dataset_reason()   # Finalize the dataset with complete reasoning annotations.
+```
 
 ### 3. Zero-Shot Reasoning with LLMs
-- Generate metaphorical reasoning with zero-shot LLMs:  
-  ```python
-  Run_LLM_reason_usage_only()
-  Run_LLM_reasoning()
-  ```
+Run zero-shot metaphorical reasoning and evaluate:
+```python
+Run_LLM_reason_usage_only()  # Zero-shot reasoning using usage context.
+Run_LLM_reasoning()          # General zero-shot reasoning.
+```
 
-- Calculate metrics for LLaMA3 predictions:  
-  ```python
-  cal_llama3_label_metrics()
-  cal_llama3_pred_metrics()
-  ```
+Evaluate predictions from LLaMA3 models:
+```python
+cal_llama3_label_metrics()   # Calculate label prediction metrics.
+cal_llama3_pred_metrics()    # Evaluate reasoning prediction quality.
+```
 
 ### 4. Textual Entailment-Based Similarity Judgments
-  ```python
-  cal_entail_average_evaluate_score()
-  cal_entail_average_evaluate_score_wo_usage()
-  ```
+Evaluate reasoning similarity with textual entailment:
+```python
+cal_entail_average_evaluate_score()          # Evaluate using entailment metrics.
+cal_entail_average_evaluate_score_wo_usage() # Similarity evaluation without usage context.
+```
 
 ### 5. LLM-Based Similarity Judgments
-- Run similarity-based reasoning predictions:  
-  ```python
-  Run_similiary_pred()
-  Run_similiary_pred_wo_usage()
-  ```
-
-- Calculate average evaluation scores with LLMs:  
-  ```python
-  cal_LLMs_average_evaluate_score()
-  ```
+Run similarity predictions and calculate evaluation scores:
+```python
+Run_similiary_pred()                        # Generate similarity-based reasoning predictions.
+Run_similiary_pred_wo_usage()               # Similarity predictions without usage context.
+cal_LLMs_average_evaluate_score()           # Calculate average evaluation scores.
+```
 
 ### 6. Automatic Evaluation
-  ```python
-  get_BLEU_ave_scores()
-  ```
+Compute BLEU scores for reasoning quality:
+```python
+get_BLEU_ave_scores()
+```
 
 ---
 
 ## License
-This project is licensed under the [MIT License](LICENSE).  
 
-For questions or contributions, feel free to open an issue or submit a pull request.
+This project is licensed under the [MIT License](LICENSE).
