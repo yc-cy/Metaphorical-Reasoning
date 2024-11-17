@@ -1,2 +1,0 @@
-rm -rf results
-python run_clm_no_trainer.py
