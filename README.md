@@ -1,6 +1,6 @@
 # Metaphorical Reasoning Repository
 
-This repository provides tools and resources for metaphorical reasoning, as introduced in our paper: **"Merely Judging Metaphor is Not Enough: Research on Reasonable Metaphor Detection"**, published in Findings of EMNLP 2025.  
+This repository provides tools and resources for metaphorical reasoning, as introduced in our paper: **"Merely Judging Metaphor is Not Enough: Research on Reasonable Metaphor Detection"**, published in Findings of EMNLP 2024.  
 
 ---
 
