@@ -28,7 +28,7 @@ python run_clm_no_trainer.py
 ```
 
 ### 2. Obtain Metaphor Reasoning Results with LLMs
-Use the following functions in `data_process.py` to generate metaphor reasoning datasets (the same thing as below):
+Use the following functions in `data_process.py` to generate metaphor reasoning results (the same thing as below):
 ```python
 get_dataset_reason()         # Generate metaphor reasoning for the dataset.
 get_final_dataset_reason()   # Finalize the dataset with complete reasoning annotations.
