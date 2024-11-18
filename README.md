@@ -68,8 +68,3 @@ Compute BLEU scores for reasoning quality:
 get_BLEU_ave_scores()
 ```
 
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
